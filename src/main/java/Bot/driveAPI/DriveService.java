@@ -6,9 +6,9 @@ import java.io.*;
 import java.util.*;
 public class DriveService{
     private static final Drive drive = DriveRunner.getDrive();
-    public static final String PHOTO_FOLDER = "1RtMzlaGRWNaRfdpCdccSXYczWkSes1IG";
-    public static final String INFO_ID = "1EW4eGILFLycEGEGi9UcFgMpnoJesfoMV";
-    public static final String HELP_ID = "1C3chnbj8LFn-D2tsYxkqpUwWMWixS5L7";
+    public static final String PHOTO_FOLDER = "1-MJtymNF3KoGw85gdDbk1C1Owj0icij-";
+    public static final String INFO_ID = "1DfbPIAKPZjLq4kjgVYXKl4Xxw_BYLrel";
+    public static final String HELP_ID = "1KUBaJwGAaIPT66e7yX32txtew-0cnoH1";
     public DriveService(){
         getAllFiles(null);
     }
