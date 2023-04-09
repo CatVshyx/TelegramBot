@@ -3,9 +3,7 @@ package Bot.telegram;
 import Bot.MainClass;
 import Bot.driveAPI.DriveService;
 import Bot.telegram.model.ClientHelp;
-
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -15,8 +13,9 @@ public class RequestList {
     private List<ClientHelp> list;
     private int queue = 0;
     private DriveService driveService = MainClass.getDriveService();
-    public RequestList() throws IOException {
-        readData();
+    public RequestList() {
+        setSessionWithData();
+
     }
     private List<ClientHelp> parseMessage(String[] message){
         String title, description, email;
@@ -48,6 +47,7 @@ public class RequestList {
         InputStream is = driveService.downloadFileAsInputStream(DriveService.HELP_ID).getKey();
         String response = DriveService.readStreamAsString(is);
         list = parseMessage(response.split("\n"));
+        queue = 0;
     }
     public ClientHelp nextHelp(){
         chosenClient = list.get(queue%list.size());
@@ -69,5 +69,23 @@ public class RequestList {
 
     public ClientHelp getChosenClient() {
         return chosenClient;
+    }
+
+
+    private  void setSessionWithData(){
+        Runnable runnable = () -> {
+            try {
+                while (true){
+                    Thread.sleep(30000);
+                    System.out.println("read");
+                    readData();
+                }
+            } catch (InterruptedException | IOException e) {
+                throw new RuntimeException(e);
+            }
+        };
+        Thread requestSession = new Thread(runnable);
+        requestSession.setDaemon(true);
+        requestSession.start();
     }
 }
