@@ -33,6 +33,10 @@ Libraries: TelegramBot API, Google Drive API, Google API Client, Jakarta Mail li
 - Set regular update of users` requests with a thread which updates a built-in class list of requests, and especially parse each of them. The request are taken from a txt file saved on Google Drive account. The file is updated by both server which sends requests there and bot which removes already answered requests.  Such purpose of dividing is made because of inability to save them with server 
 ## Screenshots
 
-[gif process of sending a request and getting it]
+<p align="center">!
+<img src="https://user-images.githubusercontent.com/47032134/236805969-2bbc5658-bc5a-4e48-b1b5-daec601c8076.gif" width="500" height="600">
+
+</p>
+
 
 The process of answering and sending request one of the users
