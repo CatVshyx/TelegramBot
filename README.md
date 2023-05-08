@@ -1,4 +1,5 @@
 [bot icon]
+<p align="center"><image src="https://user-images.githubusercontent.com/47032134/236805969-2bbc5658-bc5a-4e48-b1b5-daec601c8076.gif" width="200" height="200"></p>
 # Telegram bot for FinanceFlow App
 
 Bot made for help assistants to consult the clients. They don`t need to download additional programs/ register or login on websites  or that kind of this. Just open you telegram , print specified key to get access to the bot and finally start working! Users are waiting!
