@@ -19,7 +19,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DriveRunner {
-    private static final String APPLICATION_NAME = "Google Drive API Java Quickstart";
+    private static final String APPLICATION_NAME = "Google Drive";
     private static final String credentials;
 
     private static Drive getService() throws IOException, GeneralSecurityException {
