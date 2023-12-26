@@ -8,8 +8,8 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class EmailService {
-    private static String username = "norepdipl@gmail.com";
-    private static String password = "mcUt2CPOfMbRj19F";
+    private static String username = "";
+    private static String password = "";
     private static final Properties properties = getMailCredentials();
     private final Session session = Session.getInstance(properties, new Authenticator() {
 
